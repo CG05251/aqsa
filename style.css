@@ -713,6 +713,44 @@ body {
     .name span { font-size: 1.1rem; }
     .right .balloon_one { top: 10px; left: -77px; }
     .right .balloon_one img { width: 76px !important; }
+
+    /* --- MOBILE OVERRIDES FOR 3D ENVELOPE MODAL (.boxMail) --- */
+    .boxMail .boxMail-container {
+        width: 90vw;
+        height: 430px;
+        transform: scale(1);
+    }
+    
+    .boxMail .boxMail-container:hover .card1 {
+        transform: translate(-25%, -50%) rotateY(-145deg) scale(0.9);
+    }
+
+    .boxMail .boxMail-container .card1 h3 {
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+    }
+
+    .boxMail .boxMail-container .card1 .userImg {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 12px;
+    }
+
+    .boxMail .boxMail-container .card2 h2 {
+        font-size: 1.1rem;
+        max-height: 300px;
+        padding: 0px 15px;
+    }
+
+    .boxMail .boxMail-container .card2 h3 {
+        font-size: 1.4rem;
+        padding: 15px 0px 5px 30px;
+    }
+    
+    @keyframes texth3 {
+        0% { opacity: 1; visibility: visible; padding: 15px 0px 5px 30px; }
+        100% { opacity: 1; visibility: visible; padding: 15px 0px 5px 65px; }
+    }
 }
 
 /* --- 3D ENVELOPE MODIFICATIONS (CRITICAL STYLING FIXES) --- */
@@ -868,8 +906,8 @@ body {
 }
 
 .boxMail .boxMail-container .card2:hover h3{
-    animation: texth3 3s forwards;
-    animation-delay: 1s;
+    animation: texth3 0.8s forwards; /* Instant launch configuration */
+    animation-delay: 0.1s;
 }
 
 @keyframes texth3{
@@ -891,8 +929,8 @@ body {
 }
 
 .boxMail .boxMail-container .card2:hover h2{
-    animation: texth2 2s forwards;
-    animation-delay: 2.2s;
+    animation: texth2 1s forwards; /* Reduced from 2s to 1s for immediate display */
+    animation-delay: 0.4s;          /* Delayed slightly to match the header entry smoothly */
 }
 
 @keyframes texth2{
