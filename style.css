@@ -877,13 +877,17 @@ body {
     100%{ opacity: 1; visibility: visible; padding: 25px 0px 10px 120px; }
 }
 
+/* --- UPDATED TEXT AREA FIXING SCROLLBAR AND SPACING --- */
 .boxMail .boxMail-container .card2 h2{
     font-family: 'Dancing Script', cursive;
     padding: 0px 30px;
-    line-height: 1.5;
-    font-size: 1.5rem;
+    line-height: 1.4;
+    font-size: 1.4rem;        /* Tuned slightly down from 1.5rem */
     opacity: 0;
     color: #4a3f3b;
+    max-height: 380px;        /* Limits text boundary safely within the container card height */
+    overflow-y: auto;         /* Automatically enables a clean, inner scrolling box if content overflows */
+    padding-bottom: 20px;
 }
 
 .boxMail .boxMail-container .card2:hover h2{
